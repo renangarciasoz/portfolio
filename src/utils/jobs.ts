@@ -1,4 +1,4 @@
-import { differenceInMonths } from "date-fns";
+import { differenceInMonths, endOfDay } from "date-fns";
 import { Companies } from "types/companies";
 
 export const getJobsDates = (
@@ -10,16 +10,16 @@ export const getJobsDates = (
 } => {
   const jobsStartDate = {
     Livus: {
-      start: new Date("2021-08-01"),
-      end: new Date(),
+      start: endOfDay(new Date("2021-08-01")),
+      end: endOfDay(new Date()),
     },
     TC: {
-      start: new Date("2021-02-1"),
-      end: new Date("2021-08-1"),
+      start: endOfDay(new Date("2021-02-01")),
+      end: endOfDay(new Date("2021-08-1")),
     },
     Loft: {
-      start: new Date("2019-07-1"),
-      end: new Date("2021-02-1"),
+      start: endOfDay(new Date("2019-07-1")),
+      end: endOfDay(new Date("2021-02-1")),
     },
   };
 
