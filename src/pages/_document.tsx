@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="black" />
           <meta name="theme-color" content="black" />
           <meta name="Renan Garcia" content="Renan Garcia" />
-          <link rel="apple-touch-icon" href="/images/icon-192x192.png" />
+          <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
