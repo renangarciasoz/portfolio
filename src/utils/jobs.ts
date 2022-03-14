@@ -15,11 +15,11 @@ export const getJobsDates = (
     },
     TC: {
       start: endOfDay(new Date("2021-02-01")),
-      end: endOfDay(new Date("2021-08-1")),
+      end: endOfDay(new Date("2021-08-01")),
     },
     Loft: {
-      start: endOfDay(new Date("2019-07-1")),
-      end: endOfDay(new Date("2021-02-1")),
+      start: endOfDay(new Date("2019-07-01")),
+      end: endOfDay(new Date("2021-02-01")),
     },
   };
 
