@@ -5,7 +5,6 @@ const { i18n } = require("./next-i18next.config");
 
 const nextConfig = withPWA({
   i18n,
-  trailingSlash: true,
   reactStrictMode: true,
   pwa: {
     disable: process.env.NODE_ENV === "development",
