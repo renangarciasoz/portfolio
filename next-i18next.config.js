@@ -4,7 +4,7 @@
 module.exports = {
   i18n: {
     reloadOnPrerender: true, // reload texts when reload page.
-    locales: ["default", "en", "pt-BR"],
-    defaultLocale: "default",
+    locales: ["en", "pt-BR"],
+    defaultLocale: "en",
   },
 };

@@ -6,7 +6,7 @@ import * as React from "react";
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang="pt-BR">
+      <Html>
         <Head>
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="apple-mobile-web-app-status-bar-style" content="white" />

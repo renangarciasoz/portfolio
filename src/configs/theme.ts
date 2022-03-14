@@ -1,6 +1,15 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
 
 const globalTheme = {
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        a: {
+          transition: "color 0.5s",
+        },
+      },
+    },
+  },
   typography: {
     fontFamily: "'Sora', 'sans-serif'",
     h1: {

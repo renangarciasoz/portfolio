@@ -1,6 +1,7 @@
 import { GitHub, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
 import {
   Box,
+  Button,
   Divider,
   Link as LinkMUI,
   Theme,
@@ -70,7 +71,7 @@ const UsedTechs = () => {
             m: 1,
             display: "inline-flex",
             alignItems: "center",
-            transition: "0.5s",
+
             color: "text.secondary",
             "&:hover": {
               color: "text.primary",
@@ -120,7 +121,7 @@ const SocialMedias = () => {
             m: 1,
             display: "inline-flex",
             alignItems: "center",
-            transition: "0.5s",
+
             color: "text.secondary",
             "&:hover": {
               color: "text.primary",
@@ -204,12 +205,12 @@ const Home: NextPage = () => {
           justifyContent="space-between"
           alignItems="center"
           py={1}
-          px={{ xs: 2, md: 4 }}
+          pl={{ xs: 3, md: 4 }}
+          pr={{ xs: 1, md: 2 }}
         >
           <Link href="/" passHref>
             <LinkMUI
               sx={{
-                transition: "0.5s",
                 color: "text.primary",
                 "&:hover": { color: "text.secondary" },
               }}
@@ -225,7 +226,7 @@ const Home: NextPage = () => {
               <LinkMUI
                 sx={{
                   mr: 2,
-                  transition: "0.5s",
+
                   textTransform: "uppercase",
                   color: "text.secondary",
                   "&:hover": { color: "text.primary" },
@@ -239,7 +240,6 @@ const Home: NextPage = () => {
             <Link href={router.pathname} locale={EN} passHref>
               <LinkMUI
                 sx={{
-                  transition: "0.5s",
                   textTransform: "uppercase",
                   color: "text.secondary",
                   "&:hover": { color: "text.primary" },
@@ -252,16 +252,12 @@ const Home: NextPage = () => {
             </Link>
           </Box>
 
-          <Box
-            component="button"
+          <Button
+            disableRipple
             sx={{
-              border: "none",
-              bgcolor: "transparent",
-              outline: "none",
-              display: "flex",
-              alignItems: "center",
-              color: "text.primary",
-              cursor: "pointer",
+              position: "relative",
+              color: "text.secondary",
+              pl: 6,
             }}
             onClick={toggleTheme}
           >
@@ -273,18 +269,22 @@ const Home: NextPage = () => {
               direction={darkLightAnimation.direction}
               width={50}
               height={50}
+              style={{
+                position: "absolute",
+                left: -8,
+              }}
             />
             <Typography variant="caption" sx={{ ml: -1 }}>
               {isDarkMode
                 ? t<string>("turnLightsOn")
                 : t<string>("turnLightsOff")}
             </Typography>
-          </Box>
+          </Button>
         </Box>
         <Divider />
       </Box>
 
-      <Box component="main" mx={{ xs: 2, md: 4 }} mt={3} mb={6}>
+      <Box component="main" mx={{ xs: 3, md: 4 }} mt={3} mb={6}>
         <Typography variant="h1">
           <Trans i18nKey="introduction" components={{ br: <br /> }} />
         </Typography>
@@ -330,12 +330,12 @@ const Home: NextPage = () => {
       <Divider />
       <Box
         component="footer"
-        p={{ xs: 2, md: 4 }}
+        p={{ xs: 3, md: 4 }}
         display="flex"
         flexDirection="column"
         alignItems="center"
       >
-        <Box>
+        <Box textAlign={{ xs: "left", md: "center" }}>
           <Typography variant="body2">
             {t("footer.socialMediasTitle")}
           </Typography>
