@@ -1,11 +1,13 @@
 import { Theme, ThemeProvider as ThemeProviderMaterial } from "@mui/material";
 import { themeDark, themeLight } from "configs/theme";
+import Head from "next/head";
 import React, { createContext, useCallback, useEffect, useState } from "react";
 
 const ThemeContext = createContext(() => {});
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<Theme>(themeDark);
+  const isDark = theme.palette.mode === "dark";
 
   useEffect(() => {
     if (window) {
@@ -15,11 +17,18 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   const changeTheme = useCallback(() => {
-    setTheme(theme.palette.mode === "dark" ? themeLight : themeDark);
-  }, [theme]);
+    setTheme(isDark ? themeLight : themeDark);
+  }, [isDark]);
 
   return (
     <ThemeContext.Provider value={changeTheme}>
+      <Head>
+        <meta
+          name="msapplication-TileColor"
+          content={isDark ? "black" : "white"}
+        />
+        <meta name="theme-color" content={isDark ? "black" : "white"} />
+      </Head>
       <ThemeProviderMaterial theme={theme}>{children}</ThemeProviderMaterial>
     </ThemeContext.Provider>
   );

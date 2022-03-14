@@ -11,10 +11,8 @@ export default class MyDocument extends Document {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta name="apple-mobile-web-app-status-bar-style" content="white" />
           <link rel="manifest" href="/manifest.json" />
-          <meta name="msapplication-TileColor" content="white" />
-          <meta name="theme-color" content="white" />
           <meta name="Renan Garcia" content="Renan Garcia" />
-          <link rel="apple-touch-icon" href="/images/icon-192x192.png" />
+          <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             rel="preconnect"
