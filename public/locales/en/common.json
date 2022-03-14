@@ -1,0 +1,55 @@
+{
+  "turnLightsOff": "Turn lights off",
+  "turnLightsOn": "Turn lights on",
+  "introduction": "Hello 👋 <br /> I'm Renan, <br /> Web Developer!",
+  "about": "I have worked as a web developer since 2016. My first contact with code was when I created my first game. <br /> <br /> I'm currently the Staff Front-end Engineer at Livus. Also, in my free time, I help beginners develop in their careers. I really love my career, is where I can feel like a superhero using JavaScript, and its power to impress users and help to create new superheroes. <br /> <br /> I have been living in Sao Paulo/Brazil with my wife and our little dog. Then when I'm not working we go out to have fun and visit our beloved family.",
+  "principles": {
+    "title": "5 Principles",
+    "principles": [
+      {
+        "title": "People"
+      },
+      {
+        "title": "Quality"
+      },
+      {
+        "title": "Be HAPPY"
+      },
+      {
+        "title": "Growth Mindset"
+      },
+      {
+        "title": "Challenge the Status Quo"
+      }
+    ]
+  },
+  "career": {
+    "title": "Career",
+    "dateTemplate": "MMM yyyy",
+    "shortMonths": "mos",
+    "present": "Present",
+    "jobs": [
+      {
+        "title": "Staff Front-end Engineer (founding team)",
+        "company": "Livus",
+        "location": "Sao Paulo, Brazil"
+      },
+      {
+        "title": "Tech Lead Front-end",
+        "company": "TC",
+        "location": "Sao Paulo, Brazil"
+      },
+      {
+        "title": "Senior Software Engineer",
+        "company": "Loft",
+        "location": "Sao Paulo, Brazil"
+      }
+    ]
+  },
+  "footer": {
+    "socialMediasTitle": "Other places that you can find me",
+    "credits": "This site was built by me 🤩",
+    "techsTitle": "With the help of the technologies below",
+    "underConstruction": "🛠 Under construction..."
+  }
+}

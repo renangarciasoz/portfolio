@@ -1,0 +1,56 @@
+{
+  "underConstruction": "Em construção...",
+  "turnLightsOff": "Apagar as luzes",
+  "turnLightsOn": "Ligar as luzes",
+  "introduction": "Olá 👋 <br /> Eu sou Renan, <br /> Desenvolvedor Web!",
+  "about": "Trabalho como desenvolvedor web desde 2016. Meu primeiro contato com código foi quando tentei criar meu primeiro jogo. <br /> <br /> Atualmente sou Staff Software Engineer na Livus. Amo minha carreira, é onde posso me sentir como um super-herói, usando JavaScript e seus poderes, para impressionar as pessoas usuárias e ajudar a criar novas pessoas super-heroínas. <br /> <br /> Moro em São Paulo/Brasil com minha esposa e nosso cachorrinha. Quando não estou trabalhando, saímos para nos divertir e visitar nossa amada família.",
+  "principles": {
+    "title": "5 Pricípios",
+    "principles": [
+      {
+        "title": "Pessoas"
+      },
+      {
+        "title": "Qualidade"
+      },
+      {
+        "title": "Seja FELIZ"
+      },
+      {
+        "title": "Mindset de Crescimento"
+      },
+      {
+        "title": "Desafie o Status Quo"
+      }
+    ]
+  },
+  "career": {
+    "title": "Carreira",
+    "dateTemplate": "MMM yyyy",
+    "shortMonths": "meses",
+    "present": "Até o momento",
+    "jobs": [
+      {
+        "title": "Staff Front-end Engineer (founding team)",
+        "company": "Livus",
+        "location": "São Paulo, Brasil"
+      },
+      {
+        "title": "Tech Lead Front-end",
+        "company": "TC",
+        "location": "São Paulo, Brasil"
+      },
+      {
+        "title": "Senior Software Engineer",
+        "company": "Loft",
+        "location": "São Paulo, Brasil"
+      }
+    ]
+  },
+  "footer": {
+    "socialMediasTitle": "Outros lugares que você pode me encontrar",
+    "credits": "Este site foi construído por mim 🤩",
+    "techsTitle": "Com a ajuda das tecnologias abaixo",
+    "underConstruction": "🛠 Em construção..."
+  }
+}
