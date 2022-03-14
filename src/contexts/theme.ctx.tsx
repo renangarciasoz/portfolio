@@ -28,6 +28,10 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
           content={isDark ? "black" : "white"}
         />
         <meta name="theme-color" content={isDark ? "black" : "white"} />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content={isDark ? "black" : "white"}
+        />
       </Head>
       <ThemeProviderMaterial theme={theme}>{children}</ThemeProviderMaterial>
     </ThemeContext.Provider>
