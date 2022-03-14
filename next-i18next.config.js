@@ -7,6 +7,6 @@ module.exports = {
     reloadOnPrerender: true, // reload texts when reload page.
     locales: ["en", "pt-BR"],
     defaultLocale: "en",
-    localePath: path.resolve("./public/static/locales"),
+    localePath: path.resolve("./public/locales"),
   },
 };
