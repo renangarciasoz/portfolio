@@ -1,7 +1,14 @@
-import { GitHub, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
+import {
+  GitHub,
+  Instagram,
+  LinkedIn,
+  MoreHoriz,
+  Twitter,
+} from "@mui/icons-material";
 import {
   Box,
   Button,
+  Container,
   Divider,
   Link as LinkMUI,
   Theme,
@@ -198,134 +205,149 @@ const Home: NextPage = () => {
         top={0}
         bgcolor="background.default"
       >
-        <Box
-          component="nav"
-          width="100%"
-          display="flex"
-          justifyContent="space-between"
-          alignItems="center"
-          py={1}
-          pl={{ xs: 3, md: 4 }}
-          pr={{ xs: 1, md: 2 }}
-        >
-          <Link href="/" passHref>
-            <LinkMUI
-              sx={{
-                color: "text.primary",
-                "&:hover": { color: "text.secondary" },
-              }}
-              underline="none"
-            >
-              <Typography variant="h5" fontWeight={700}>
-                {isMobile ? "R." : "Renan."}
-              </Typography>
-            </LinkMUI>
-          </Link>
-          <Box>
-            <Link href={router.pathname} locale={PT_BR} passHref>
-              <LinkMUI
-                sx={{
-                  mr: 2,
-
-                  textTransform: "uppercase",
-                  color: "text.secondary",
-                  "&:hover": { color: "text.primary" },
-                }}
-                color="text.secondary"
-                underline={router.locale === PT_BR ? "always" : "hover"}
-              >
-                {PT_BR}
-              </LinkMUI>
-            </Link>
-            <Link href={router.pathname} locale={EN} passHref>
-              <LinkMUI
-                sx={{
-                  textTransform: "uppercase",
-                  color: "text.secondary",
-                  "&:hover": { color: "text.primary" },
-                }}
-                color="text.secondary"
-                underline={router.locale === EN ? "always" : "hover"}
-              >
-                {EN}
-              </LinkMUI>
-            </Link>
-          </Box>
-
-          <Button
-            disableRipple
-            sx={{
-              position: "relative",
-              color: "text.secondary",
-              pl: 6,
-            }}
-            onClick={toggleTheme}
+        <Container maxWidth="xl">
+          <Box
+            component="nav"
+            width="100%"
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            py={{ xs: 2, sm: 3 }}
           >
-            <Lottie
-              options={lottieDefaultData}
-              isStopped={darkLightAnimation.isStopped}
-              isPaused={darkLightAnimation.isPaused}
-              speed={darkLightAnimation.speed}
-              direction={darkLightAnimation.direction}
-              width={50}
-              height={50}
-              style={{
-                position: "absolute",
-                left: -8,
+            <Link href="/" passHref>
+              <LinkMUI
+                sx={{
+                  color: "text.primary",
+                  "&:hover": { color: "text.secondary" },
+                }}
+                underline="none"
+              >
+                <Typography variant="h5" fontWeight={700}>
+                  {isMobile ? "R." : "Renan."}
+                </Typography>
+              </LinkMUI>
+            </Link>
+            <Box>
+              <Link href={router.pathname} locale={PT_BR} passHref>
+                <LinkMUI
+                  fontSize={isMobile ? "small" : "medium"}
+                  sx={{
+                    mr: 2,
+
+                    textTransform: "uppercase",
+                    color: "text.secondary",
+                    "&:hover": { color: "text.primary" },
+                  }}
+                  color="text.secondary"
+                  underline={router.locale === PT_BR ? "always" : "hover"}
+                >
+                  {PT_BR}
+                </LinkMUI>
+              </Link>
+              <Link href={router.pathname} locale={EN} passHref>
+                <LinkMUI
+                  fontSize={isMobile ? "small" : "medium"}
+                  sx={{
+                    textTransform: "uppercase",
+                    color: "text.secondary",
+                    "&:hover": { color: "text.primary" },
+                  }}
+                  color="text.secondary"
+                  underline={router.locale === EN ? "always" : "hover"}
+                >
+                  {EN}
+                </LinkMUI>
+              </Link>
+            </Box>
+
+            <Button
+              disableRipple
+              sx={{
+                position: "relative",
+                color: "text.secondary",
+                pl: 6,
               }}
-            />
-            <Typography variant="caption" sx={{ ml: -1 }}>
-              {isDarkMode
-                ? t<string>("turnLightsOn")
-                : t<string>("turnLightsOff")}
-            </Typography>
-          </Button>
-        </Box>
+              onClick={toggleTheme}
+            >
+              <Lottie
+                options={lottieDefaultData}
+                isStopped={darkLightAnimation.isStopped}
+                isPaused={darkLightAnimation.isPaused}
+                speed={darkLightAnimation.speed}
+                direction={darkLightAnimation.direction}
+                width={50}
+                height={50}
+                style={{
+                  position: "absolute",
+                  left: -8,
+                }}
+              />
+              <Typography variant="caption" sx={{ ml: -1 }}>
+                {isDarkMode
+                  ? t<string>("turnLightsOn")
+                  : t<string>("turnLightsOff")}
+              </Typography>
+            </Button>
+          </Box>
+        </Container>
         <Divider />
       </Box>
 
-      <Box component="main" mx={{ xs: 3, md: 4 }} mt={3} mb={6}>
-        <Typography variant="h1">
-          <Trans i18nKey="introduction" components={{ br: <br /> }} />
-        </Typography>
-        <Typography
-          component="p"
-          variant="h5"
-          sx={{ my: 3, mb: 15, maxWidth: 920 }}
-        >
-          <Trans i18nKey="about" components={{ br: <br /> }} />
-        </Typography>
-        <Box mb={15}>
-          <Typography variant="h3" component="h2">
-            {t("principles.title")}
+      <Box component="main" mt={3} my={4} mb={6}>
+        <Container maxWidth="xl">
+          <Typography component="h1" variant={isMobile ? "h2" : "h1"}>
+            <Trans i18nKey="introduction" components={{ br: <br /> }} />
           </Typography>
-          {t<string, PrinciplesLocale[]>("principles.principles", {
-            returnObjects: true,
-          }).map(({ title }) => (
-            <Typography component="h3" variant="h6" key={title}>
-              {title}
+          <Typography
+            component="p"
+            variant={isMobile ? "body1" : "h5"}
+            sx={{ my: 3, mb: isMobile ? 8 : 12, maxWidth: 920 }}
+          >
+            <Trans i18nKey="about" components={{ br: <br /> }} />
+          </Typography>
+          <Box mb={{ xs: 8, sm: 12 }}>
+            <Typography variant={isMobile ? "h4" : "h3"} component="h2">
+              {t("principles.title")}
             </Typography>
-          ))}
-        </Box>
+            {t<string, PrinciplesLocale[]>("principles.principles", {
+              returnObjects: true,
+            }).map(({ title }) => (
+              <Typography component="h3" variant="h6" key={title}>
+                {title}
+              </Typography>
+            ))}
+          </Box>
 
-        <Typography variant="h3" component="h2">
-          {t("career.title")}
-        </Typography>
-        {t<string, CareerJobsLocale[]>("career.jobs", {
-          returnObjects: true,
-        }).map(({ title, company, location }) => (
-          <Box mt={2} mb={6} key={title}>
-            <Typography variant="h5" component="h3">
-              {title}
-            </Typography>
-            <Typography>
-              {company} - {location}
-            </Typography>
-            <Typography>
-              {formatCareerJobDates(getJobsDates(company as Companies))}
+          <Typography variant={isMobile ? "h4" : "h3"} component="h2">
+            {t("career.title")}
+          </Typography>
+          {t<string, CareerJobsLocale[]>("career.jobs", {
+            returnObjects: true,
+          }).map(({ title, company, location }) => (
+            <Box mt={1} mb={4} key={title}>
+              <Typography variant="h6" component="h3">
+                {title}
+              </Typography>
+              <Typography>
+                {company} - {location}
+              </Typography>
+              <Typography>
+                {formatCareerJobDates(getJobsDates(company as Companies))}
+              </Typography>
+            </Box>
+          ))}
+          <Box
+            width="100%"
+            display="flex"
+            alignItems="center"
+            flexDirection="column"
+          >
+            <MoreHoriz />
+            <Typography variant="caption">
+              {t("footer.underConstruction")}
             </Typography>
           </Box>
-        ))}
+        </Container>
       </Box>
       <Divider />
       <Box
@@ -333,30 +355,22 @@ const Home: NextPage = () => {
         p={{ xs: 3, md: 4 }}
         display="flex"
         flexDirection="column"
-        alignItems="center"
+        alignItems={{ xs: "left", md: "center" }}
+        textAlign={{ xs: "left", md: "center" }}
       >
-        <Box textAlign={{ xs: "left", md: "center" }}>
+        <Box>
           <Typography variant="body2">
             {t("footer.socialMediasTitle")}
           </Typography>
           <SocialMedias />
         </Box>
-        <Box my={2} textAlign={{ xs: "left", md: "center" }}>
+        <Box my={2}>
           <Typography variant="body2">{t("footer.credits")}</Typography>
           <Box>
             <Typography variant="body2">{t("footer.techsTitle")}</Typography>
             <UsedTechs />
           </Box>
         </Box>
-
-        <Typography
-          component="h2"
-          variant="h6"
-          color="text.secondary"
-          sx={{ my: 3 }}
-        >
-          {t("footer.underConstruction")}
-        </Typography>
       </Box>
     </>
   );

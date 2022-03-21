@@ -1,5 +1,4 @@
 {
-  "underConstruction": "Em construção...",
   "turnLightsOff": "Apagar as luzes",
   "turnLightsOn": "Ligar as luzes",
   "introduction": "Olá 👋 <br /> Eu sou Renan, <br /> Desenvolvedor Web!",
@@ -51,6 +50,6 @@
     "socialMediasTitle": "Outros lugares que você pode me encontrar",
     "credits": "Este site foi construído por mim 🤩",
     "techsTitle": "Com a ajuda das tecnologias abaixo",
-    "underConstruction": "🛠 Em construção..."
+    "underConstruction": "🛠 Em construção"
   }
 }
