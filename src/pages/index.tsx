@@ -29,6 +29,7 @@ import * as darkLightLottie from "src/lotties/light-dark-mode.json";
 import { Companies } from "types/companies";
 import { CareerJobsLocale, PrinciplesLocale } from "types/locales";
 import { getJobsDates } from "utils/jobs";
+import Image from "next/image";
 
 const UsedTechs = () => {
   const usedTechs = [
@@ -302,9 +303,19 @@ const Home: NextPage = () => {
 
       <Box component="main" mt={3} my={4} mb={6}>
         <Container maxWidth="xl">
-          <Typography component="h1" variant={isMobile ? "h2" : "h1"}>
-            <Trans i18nKey="introduction" components={{ br: <br /> }} />
-          </Typography>
+          <Box display="flex" pt={3}>
+            <Typography component="h1" variant={isMobile ? "h2" : "h1"}>
+              <Trans i18nKey="introduction" components={{ br: <br /> }} />
+            </Typography>
+            <Box
+              width={{ xs: 100, sm: 150, md: 200 }}
+              overflow="hidden"
+              position="relative"
+              mb={{ xs: 1, sm: 2, md: 2.5 }}
+            >
+              <Image src="/images/renan.png" alt="me" fill />
+            </Box>
+          </Box>
           <Typography
             component="p"
             variant={isMobile ? "body1" : "h5"}
