@@ -1,10 +1,8 @@
-import {
-  GitHub,
-  Instagram,
-  LinkedIn,
-  MoreHoriz,
-  Twitter,
-} from "@mui/icons-material";
+import GitHub from "@mui/icons-material/GitHub";
+import Instagram from "@mui/icons-material/Instagram";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+import MoreHoriz from "@mui/icons-material/MoreHoriz";
+import Twitter from "@mui/icons-material/Twitter";
 import {
   Box,
   Button,
@@ -149,8 +147,11 @@ const Home: NextPage = () => {
   const theme = useTheme();
   const isDarkMode = theme.palette.mode === "dark";
   const router = useRouter();
-  const isMobile = useMediaQuery((theme: Theme) =>
-    theme.breakpoints.down("sm")
+  const isMobile = useMediaQuery(
+    (theme: Theme) => theme.breakpoints.down("sm"),
+    {
+      noSsr: true,
+    }
   );
   const [darkLightAnimation, setLightDarkAnimation] = useState({
     isStopped: false,
@@ -214,8 +215,9 @@ const Home: NextPage = () => {
             alignItems="center"
             py={{ xs: 2, sm: 3 }}
           >
-            <Link href="/" passHref>
+            <Link href="/" passHref legacyBehavior>
               <LinkMUI
+                href="/"
                 sx={{
                   color: "text.primary",
                   "&:hover": { color: "text.secondary" },
@@ -228,7 +230,12 @@ const Home: NextPage = () => {
               </LinkMUI>
             </Link>
             <Box>
-              <Link href={router.pathname} locale={PT_BR} passHref>
+              <Link
+                href={router.pathname}
+                locale={PT_BR}
+                passHref
+                legacyBehavior
+              >
                 <LinkMUI
                   fontSize={isMobile ? "small" : "medium"}
                   sx={{
@@ -244,7 +251,7 @@ const Home: NextPage = () => {
                   {PT_BR}
                 </LinkMUI>
               </Link>
-              <Link href={router.pathname} locale={EN} passHref>
+              <Link href={router.pathname} locale={EN} passHref legacyBehavior>
                 <LinkMUI
                   fontSize={isMobile ? "small" : "medium"}
                   sx={{
