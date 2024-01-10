@@ -2,6 +2,7 @@ import createEmotionServer from "@emotion/server/create-instance";
 import createEmotionCache from "configs/create-emotion-chache";
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import * as React from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default class MyDocument extends Document {
   render() {
@@ -29,6 +30,7 @@ export default class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <SpeedInsights />
         </body>
       </Html>
     );
