@@ -1,8 +1,8 @@
 {
   "turnLightsOff": "Turn lights off",
   "turnLightsOn": "Turn lights on",
-  "introduction": "Hello 👋 <br /> I'm Renan, <br /> Web Developer!",
-  "about": "I have worked as a web developer since 2016. My first contact with code was when I created my first game. <br /> <br /> I'm currently the Staff Front-end Engineer at Livus. Also, in my free time, I help beginners develop in their careers. I really love my career, is where I can feel like a superhero using JavaScript, and its power to impress users and help to create new superheroes. <br /> <br /> I have been living in Sao Paulo/Brazil with my wife and our little dog. Then when I'm not working we go out to have fun and visit our beloved family.",
+  "introduction": "Hello 👋 <br /> I'm Renan!",
+  "about": "A Brazilian Software Engineer with 8 years of experience in the field. Currently, I'm based in Los Angeles, California, and I'm passionate about creating innovative and efficient software solutions. My professional journey at EPCVIP has allowed me to enhance my skills and contribute to successful projects. I'm eager to continue facing exciting challenges and shaping the future of technology. <br/> <br/>Outside the office, I find my passion in mentoring beginners in programming, helping people take their first steps in this incredible universe. I also deeply value spending time with my family and am always on the lookout for new hobbies and adventures to spice up life. Traveling is one of my greatest passions, as well as maintaining an active lifestyle through physical activities. <br/> <br/>Amidst all this, I'm constantly making new friends, exploring new cultures, and expanding my horizons.",
   "principles": {
     "title": "5 Principles",
     "principles": [
@@ -29,6 +29,11 @@
     "shortMonths": "mos",
     "present": "Present",
     "jobs": [
+      {
+        "title": "Software Engineer",
+        "company": "EPCVIP",
+        "location": "Los Angeles, California"
+      },
       {
         "title": "Staff Front-end Engineer (founding team)",
         "company": "Livus",

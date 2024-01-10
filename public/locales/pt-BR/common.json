@@ -1,8 +1,8 @@
 {
   "turnLightsOff": "Apagar as luzes",
   "turnLightsOn": "Ligar as luzes",
-  "introduction": "Olá 👋 <br /> Eu sou Renan, <br /> Desenvolvedor Web!",
-  "about": "Trabalho como desenvolvedor web desde 2016. Meu primeiro contato com código foi quando tentei criar meu primeiro jogo. <br /> <br /> Atualmente sou Staff Software Engineer na Livus. Amo minha carreira, é onde posso me sentir como um super-herói, usando JavaScript e seus poderes, para impressionar as pessoas usuárias e ajudar a criar novas pessoas super-heroínas. <br /> <br /> Moro em São Paulo/Brasil com minha esposa e nosso cachorrinha. Quando não estou trabalhando, saímos para nos divertir e visitar nossa amada família.",
+  "introduction": "Olá 👋 <br /> Eu sou Renan!!",
+  "about": "Olá, sou Renan, um Engenheiro de Software brasileiro com 8 anos de experiência na área. Atualmente, estou baseado em Los Angeles, Califórnia, e sou apaixonado por criar soluções de software inovadoras e eficientes. Minha jornada profissional na EPCVIP me permitiu aprimorar minhas habilidades e contribuir para projetos de sucesso. Estou ansioso para continuar enfrentando desafios emocionantes e construindo o futuro da tecnologia. <br/><br/>Fora do escritório, encontro minha paixão na mentoria de iniciantes na programação, auxiliando pessoas a dar os primeiros passos nesse universo incrível. Também valorizo profundamente o tempo junto à minha família e estou sempre em busca de novos hobbies e aventuras para apimentar a vida. Viajar é uma das minhas maiores paixões, assim como manter um estilo de vida ativo por meio de atividades físicas.  <br/><br/>Em meio a tudo isso, estou constantemente fazendo novas amizades, explorando novas culturas e expandindo meus horizontes.",
   "principles": {
     "title": "5 Pricípios",
     "principles": [
@@ -29,6 +29,11 @@
     "shortMonths": "meses",
     "present": "Até o momento",
     "jobs": [
+      {
+        "title": "Engenheiro de Software",
+        "company": "EPCVIP",
+        "location": "Los Angeles, California"
+      },
       {
         "title": "Staff Front-end Engineer (founding team)",
         "company": "Livus",

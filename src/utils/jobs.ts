@@ -9,9 +9,13 @@ export const getJobsDates = (
   worked: number;
 } => {
   const jobsStartDate = {
+    EPCVIP: {
+      start: endOfDay(new Date("2022-06-01")),
+      end: endOfDay(new Date()),
+    },
     Livus: {
       start: endOfDay(new Date("2021-08-01")),
-      end: endOfDay(new Date()),
+      end: endOfDay(new Date("2022-05-31")),
     },
     TC: {
       start: endOfDay(new Date("2021-02-01")),

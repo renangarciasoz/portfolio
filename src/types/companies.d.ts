@@ -1,1 +1,1 @@
-export type Companies = "Livus" | "TC" | "Loft";
+export type Companies =  'EPCVIP' |"Livus" | "TC" | "Loft" ;
