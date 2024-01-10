@@ -192,12 +192,12 @@ const Home: NextPage = () => {
   }) =>
     isEqual(dates.end, new Date())
       ? `${format(dates.start, t("career.dateTemplate"))} - ${t(
-          "career.present"
-        )} • ${dates.worked}${t("career.shortMonths")}`
+        "career.present"
+      )} • ${dates.worked}${t("career.shortMonths")}`
       : `${format(dates.start, t("career.dateTemplate"))} - ${format(
-          dates.end,
-          t("career.dateTemplate")
-        )} • ${dates.worked}${t("career.shortMonths")}`;
+        dates.end,
+        t("career.dateTemplate")
+      )} • ${dates.worked}${t("career.shortMonths")}`;
 
   return (
     <>
@@ -303,19 +303,9 @@ const Home: NextPage = () => {
 
       <Box component="main" mt={3} my={4} mb={6}>
         <Container maxWidth="xl">
-          <Box display="flex" pt={3}>
-            <Typography component="h1" variant={isMobile ? "h2" : "h1"}>
-              <Trans i18nKey="introduction" components={{ br: <br /> }} />
-            </Typography>
-            <Box
-              width={{ xs: 100, sm: 150, md: 200 }}
-              overflow="hidden"
-              position="relative"
-              mb={{ xs: 1, sm: 2, md: 2.5 }}
-            >
-              <Image src="/images/renan.png" alt="me" fill />
-            </Box>
-          </Box>
+          <Typography component="h1" variant={isMobile ? "h2" : "h1"}>
+            <Trans i18nKey="introduction" components={{ br: <br /> }} />
+          </Typography>
           <Typography
             component="p"
             variant={isMobile ? "body1" : "h5"}
