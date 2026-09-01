@@ -1,10 +1,10 @@
 {
-  "name": "Renan Garcia",
+  "name": "Renan Garcia, Software Engineer",
   "short_name": "Renan Garcia",
-  "description": "I have worked how web developer since 2016. I love JavaScript and its powers on the web.",
-  "theme_color": "#121212",
-  "background_color": "#121212",
-  "display": "fullscreen",
+  "description": "Software Engineer based in Los Angeles building fast, reliable and delightful web products.",
+  "theme_color": "#0B0B0D",
+  "background_color": "#0B0B0D",
+  "display": "standalone",
   "orientation": "portrait",
   "scope": "/",
   "start_url": "/",
@@ -46,7 +46,7 @@
       "purpose": "maskable"
     },
     {
-      "src": "images/icons/icon-192x192.png",
+      "src": "images/icons/icon-256x256.png",
       "sizes": "256x256",
       "type": "image/png",
       "purpose": "maskable"

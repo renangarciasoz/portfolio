@@ -1,60 +1,202 @@
 {
-  "turnLightsOff": "Apagar as luzes",
-  "turnLightsOn": "Ligar as luzes",
-  "introduction": "Olá 👋 <br /> Eu sou Renan, <br />Engenheiro de Software!",
-  "about": "Brasileiro com oito anos de experiência na área. Estou localizado em Los Angeles, Califórnia, e sou apaixonado por criar soluções de software inovadoras e eficientes. O meu percurso profissional permitiu-me aprimorar as minhas competências e contribuir para projetos de sucesso. Estou ansioso para continuar enfrentando desafios emocionantes e moldando o futuro da tecnologia.<br/><br/>Fora do escritório, encontro minha paixão em orientar iniciantes em programação e ajudar pessoas a darem os primeiros passos nesse universo incrível. Também valorizo profundamente passar tempo com minha família e procuro constantemente novos hobbies e aventuras para apimentar minha vida. Viajar é uma das minhas maiores paixões e mantenho um estilo de vida ativo através de atividades físicas.<br/><br/>Em meio a tudo isso, estou constantemente fazendo novos amigos, explorando novas culturas e expandindo meus horizontes.",
+  "meta": {
+    "title": "Renan Garcia, Engenheiro de Software",
+    "description": "Engenheiro de Software em Los Angeles, criando software confiável com React, Next.js e TypeScript desde 2016."
+  },
+  "nav": {
+    "brandFull": "Renan.",
+    "brandShort": "R.",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "career": "Carreira",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "resume": "Baixar CV"
+  },
+  "theme": {
+    "toDark": "Apagar as luzes",
+    "toLight": "Ligar as luzes"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou o",
+    "role": "Engenheiro de Software",
+    "tagline": "Construo software confiável, e me importo na mesma medida com as pessoas e a cultura que o entregam.",
+    "status": "Hoje liderando um time de cinco",
+    "scroll": "Rolar"
+  },
+  "about": {
+    "title": "Sobre",
+    "body": "Brasileiro, trabalho com software desde 2016. Moro em Los Angeles, na Califórnia, e sou apaixonado por criar soluções de software inovadoras e eficientes. Minha trajetória profissional me permitiu evoluir constantemente e contribuir para projetos de sucesso. Sigo animado para encarar novos desafios e ajudar a moldar o futuro da tecnologia.<br /><br />Como líder, tento trazer estrutura e coração. Quero que as pessoas se sintam vistas, desafiadas e apoiadas, então dou autonomia, espaço para errar e feedback honesto. Prefiro desenvolver um time a ser a pessoa mais inteligente da sala.<br /><br />Fora do trabalho, amo orientar quem está dando os primeiros passos na programação. Valorizo demais o tempo com a minha família e me manter ativo, seja na academia, correndo, na praia ou fazendo snowboard e esqui. E, no caminho, sigo fazendo novos amigos, conhecendo novas culturas e expandindo meus horizontes."
+  },
   "principles": {
-    "title": "5 Pricípios",
-    "principles": [
+    "title": "Valores",
+    "items": [
       {
-        "title": "Pessoas"
+        "title": "Empatia",
+        "description": "Entender o outro antes de julgar."
       },
       {
-        "title": "Qualidade"
+        "title": "Solidariedade",
+        "description": "Estar presente pelas pessoas, principalmente nos momentos difíceis."
       },
       {
-        "title": "Seja FELIZ"
+        "title": "Persistência",
+        "description": "Seguir em frente mesmo quando é difícil."
       },
       {
-        "title": "Mindset de Crescimento"
+        "title": "Perdão",
+        "description": "Soltar os erros e escolher crescimento em vez de ressentimento."
       },
       {
-        "title": "Desafie o Status Quo"
+        "title": "Curiosidade",
+        "description": "Sempre aprendendo, sempre perguntando."
       }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "categories": [
+      { "id": "languages", "title": "Linguagens" },
+      { "id": "frameworks", "title": "Frameworks & Bibliotecas" },
+      { "id": "testing", "title": "Testes" },
+      { "id": "cloud", "title": "Cloud & DevOps" },
+      { "id": "practices", "title": "Práticas" },
+      { "id": "tools", "title": "Ferramentas & Plataformas" }
     ]
   },
   "career": {
     "title": "Carreira",
     "dateTemplate": "MMM yyyy",
-    "shortMonths": "meses",
-    "present": "Até o momento",
+    "present": "Atual",
+    "to": "a",
+    "earlier": "Experiências anteriores",
+    "yearsShort": "anos",
+    "monthsShort": "meses",
     "jobs": [
       {
-        "title": "Engenheiro de Software",
+        "id": "EPCVIP",
+        "title": "Lead Software Engineer",
         "company": "EPCVIP",
-        "location": "Los Angeles, California"
+        "location": "Los Angeles, Califórnia",
+        "summary": "Evoluí de Software Engineer para Senior e depois Lead. Lidero um time de cinco pessoas e ajudo a moldar uma nova função de product engineering, perto do código e do produto.",
+        "highlights": [
+          "Liderei a construção de uma plataforma interna unificada que consolida os sistemas da empresa em um único monorepo Nx, com React, Material UI e um design system próprio.",
+          "Desenhei a infraestrutura na AWS e o CI/CD com Terraform, Bitbucket, Nx affected e Playwright.",
+          "Entreguei produtos internos com o time, entre eles um app de call center, um gerador estático que substituiu templates Smarty legados, uma plataforma de analytics e uma plataforma de feature flags.",
+          "Trabalhei com o marketing em sites whitelabel e conversão de lead, com Google Analytics e Google Tag Manager.",
+          "Formei o time a ponto de cada engenheiro ser dono da própria aplicação, de estagiários a promoções.",
+          "Hoje conduzo a migração de um sistema Smarty de sete anos para um monorepo que funciona como um construtor de sites interno."
+        ]
       },
       {
-        "title": "Staff Front-end Engineer (founding team)",
+        "id": "Livus",
+        "title": "Staff Front-end Engineer (time fundador)",
         "company": "Livus",
-        "location": "São Paulo, Brasil"
+        "location": "São Paulo, Brasil",
+        "summary": "Front-end fundador de uma plataforma para criadores de cursos, onde depois contratei e formei um segundo engenheiro. Produto voltado ao usuário final, então qualidade e testes vinham em primeiro lugar.",
+        "highlights": [
+          "Liderei um refactor completo do front, criando um design system e elevando o nível de qualidade com Jest e Cypress.",
+          "Ajudei a construir as ferramentas que os criadores usavam para tocar o negócio: módulos de curso, páginas de venda com checkout, materiais, aulas agendadas por Zoom e analytics configuráveis.",
+          "Construí um editor WYSIWYG que permitia cada criador montar e rodar a própria página.",
+          "Trabalhei junto do produto em React, Node.js e GraphQL, e cuidei do analytics de front com Google Analytics, pixels e Hotjar."
+        ]
       },
       {
-        "title": "Tech Lead Front-end",
+        "id": "TC",
+        "title": "Senior Front-end Engineer",
         "company": "TC",
-        "location": "São Paulo, Brasil"
+        "location": "São Paulo, Brasil",
+        "summary": "Entrei como Senior Front-end Engineer em uma plataforma para traders e investidores do mercado financeiro e depois passei a liderar um pequeno squad de onboarding, com um product manager e um designer.",
+        "highlights": [
+          "Liderei a migração do site público de WordPress para React, mantendo o WordPress como CMS headless.",
+          "Construí uma experiência de onboarding guiado para deixar os primeiros passos do usuário claros e simples."
+        ]
       },
       {
-        "title": "Senior Software Engineer",
+        "id": "Loft",
+        "title": "Software Engineer II",
         "company": "Loft",
-        "location": "São Paulo, Brasil"
+        "location": "São Paulo, Brasil",
+        "summary": "Software Engineer no squad de seller onboarding em uma proptech de compra e venda de imóveis, focado no front-end da experiência de quem vende.",
+        "highlights": [
+          "Deixei o fluxo e os formulários de venda mais rápidos e claros, e criei sistemas para trazer mais leads qualificados.",
+          "Construí um formulário dinâmico que se adaptava a cada resposta, qualificando o vendedor para receber uma proposta direta em vez de uma resposta genérica.",
+          "Ajudei a lançar um simulador de preços em um mapa: você digitava o endereço e via o preço e sua evolução, com apoio do time de dados. Saiu na Exame."
+        ]
       }
     ]
   },
+  "projects": {
+    "title": "Projetos em Destaque",
+    "visit": "Acessar",
+    "code": "Código",
+    "items": [
+      {
+        "id": "finance-assistant",
+        "name": "Finance Assistant (AI)",
+        "description": "Projeto pessoal. Um assistente com IA que ajuda a acompanhar e entender as finanças pessoais."
+      },
+      {
+        "id": "movie-curator",
+        "name": "Movie Curator (AI)",
+        "description": "Projeto pessoal. Uma IA que faz a curadoria e recomenda filmes para assistir."
+      },
+      {
+        "id": "portfolio",
+        "name": "Portfólio Pessoal",
+        "description": "Este próprio site. Um portfólio rápido, acessível e totalmente bilíngue, com gerador dinâmico de currículo em PDF, feito com Next.js, TypeScript e Material UI."
+      }
+    ]
+  },
+  "education": {
+    "title": "Formação & Certificações",
+    "educationTitle": "Formação",
+    "certificationsTitle": "Certificações",
+    "languagesTitle": "Idiomas",
+    "education": [
+      {
+        "id": "ilac",
+        "institution": "ILAC",
+        "degree": "Programa de Inglês",
+        "location": "Canadá"
+      },
+      {
+        "id": "impacta",
+        "institution": "Impacta Tecnologia",
+        "degree": "Ensino Técnico, Análise e Desenvolvimento de Sistemas",
+        "location": "São Paulo, Brasil"
+      }
+    ],
+    "certifications": [
+      {
+        "id": "ucla",
+        "institution": "UCLA",
+        "degree": "General Business Management & Leadership",
+        "detail": "Liderança · Gestão · Comunicação · Negociação · Resolução de conflitos"
+      }
+    ],
+    "languages": [
+      { "name": "Inglês", "level": "Fluente, Duolingo English Test 125 (2025)" },
+      { "name": "Português", "level": "Nativo" }
+    ]
+  },
+  "contact": {
+    "title": "Diga olá",
+    "body": "A melhor forma de falar comigo é por email. Leio todas as mensagens e respondo pessoalmente.",
+    "socialsTitle": "Outros lugares onde você me encontra"
+  },
   "footer": {
-    "socialMediasTitle": "Outros lugares que você pode me encontrar",
-    "credits": "Este site foi construído por mim 🤩",
+    "credits": "Projetado e desenvolvido por Renan Garcia",
     "techsTitle": "Com a ajuda das tecnologias abaixo",
-    "underConstruction": "🛠 Em construção"
+    "rights": "Todos os direitos reservados."
+  },
+  "resume": {
+    "download": "Baixar CV",
+    "generating": "Gerando…",
+    "summaryTitle": "Resumo",
+    "experienceTitle": "Experiência",
+    "skillsTitle": "Habilidades",
+    "educationTitle": "Formação",
+    "present": "Atual"
   }
 }

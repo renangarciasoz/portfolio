@@ -1,36 +1,64 @@
-import { Theme, ThemeProvider as ThemeProviderMaterial } from "@mui/material";
-import { themeDark, themeLight } from "configs/theme";
+import { ThemeProvider as ThemeProviderMaterial } from "@mui/material";
+import { createAppTheme, ThemeMode } from "configs/theme";
 import Head from "next/head";
-import React, { createContext, useCallback, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
-const ThemeContext = createContext(() => {});
+const STORAGE_KEY = "theme-mode";
+
+interface ThemeContextValue {
+  mode: ThemeMode;
+  toggle: () => void;
+}
+
+const ThemeContext = createContext<ThemeContextValue>({
+  mode: "dark",
+  toggle: () => {},
+});
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>(themeDark);
-  const isDark = theme.palette.mode === "dark";
+  const [mode, setMode] = useState<ThemeMode>("dark");
 
+  // Resolve the preferred mode on the client: stored choice first, then the OS.
   useEffect(() => {
-    if (window) {
-      const systemDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
-      setTheme(systemDarkTheme.matches ? themeDark : themeLight);
+    const stored = window.localStorage.getItem(STORAGE_KEY) as ThemeMode | null;
+
+    if (stored === "light" || stored === "dark") {
+      setMode(stored);
+      return;
     }
+
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+    setMode(prefersDark ? "dark" : "light");
   }, []);
 
-  const changeTheme = useCallback(() => {
-    setTheme(isDark ? themeLight : themeDark);
-  }, [isDark]);
+  const toggle = useCallback(() => {
+    setMode((current) => {
+      const next = current === "dark" ? "light" : "dark";
+      window.localStorage.setItem(STORAGE_KEY, next);
+      return next;
+    });
+  }, []);
+
+  const theme = useMemo(() => createAppTheme(mode), [mode]);
+  const value = useMemo(() => ({ mode, toggle }), [mode, toggle]);
+  const isDark = mode === "dark";
 
   return (
-    <ThemeContext.Provider value={changeTheme}>
+    <ThemeContext.Provider value={value}>
       <Head>
+        <meta name="theme-color" content={isDark ? "#100F0D" : "#F5F3EE"} />
         <meta
           name="msapplication-TileColor"
-          content={isDark ? "black" : "white"}
-        />
-        <meta name="theme-color" content={isDark ? "black" : "white"} />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content={isDark ? "black" : "white"}
+          content={isDark ? "#100F0D" : "#F5F3EE"}
         />
       </Head>
       <ThemeProviderMaterial theme={theme}>{children}</ThemeProviderMaterial>
@@ -38,4 +66,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export const useChangeTheme = () => React.useContext(ThemeContext);
+export const useThemeMode = () => useContext(ThemeContext);
+
+// Backwards-compatible helper: returns the toggle function.
+export const useChangeTheme = () => useContext(ThemeContext).toggle;

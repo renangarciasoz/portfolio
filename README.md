@@ -1,34 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Renan Garcia — Portfolio
 
-## Getting Started
+A fast, accessible and fully bilingual (EN / PT-BR) personal portfolio, with a
+dynamic PDF résumé generator.
 
-First, run the development server:
+## Tech stack
+
+- **Next.js 15** (Pages Router) + **React 19** + **TypeScript**
+- **Material UI 7** + **Emotion** (premium minimalist theme, light/dark)
+- **next-i18next** for internationalization
+- **@react-pdf/renderer** for on-the-fly résumé (CV) generation
+- Deployed on **Vercel**
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Build and run in production:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm run build
+npm start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Project structure
 
-## Learn More
+```
+public/
+  images/            # profile photo + PWA icons
+  locales/{en,pt-BR} # translation files (common.json)
+src/
+  components/        # UI (layout, home sections, résumé)
+  configs/           # MUI theme + emotion cache
+  contexts/          # theme (light/dark) provider
+  constants/         # locale + namespace constants
+  data/profile.ts    # structured, language-agnostic data (links, dates, skills)
+  utils/jobs.ts      # career date helpers (locale-aware)
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Editing content
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Text** (per language) lives in `public/locales/{en,pt-BR}/common.json`.
+- **Structured data** (contact, socials, job dates, skills, projects,
+  education) lives in `src/data/profile.ts`. Items are matched to the
+  translated text by a stable `id`. Fields marked `TODO` are placeholders.
+- **Photo**: drop a file in `public/images/` and update `PROFILE_IMAGE`.
+- **Résumé (PDF)**: generated from the same data — no separate file to maintain.

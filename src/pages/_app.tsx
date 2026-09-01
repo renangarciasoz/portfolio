@@ -6,6 +6,8 @@ import { appWithTranslation } from "next-i18next";
 import { AppProps } from "next/app";
 import Head from "next/head";
 import * as React from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import nextI18NextConfig from "../../next-i18next.config";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -20,21 +22,17 @@ function MyApp(props: MyAppProps) {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <title>Renan Garcia</title>
-        <meta
-          name="description"
-          content="I have worked how web developer since 2016. I love JavaScript and its powers on the web."
-        />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        {/* CssBaseline kickstarts an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
         <Component {...pageProps} />
+        <SpeedInsights />
       </ThemeProvider>
     </CacheProvider>
   );
 }
 
-export default appWithTranslation(MyApp);
+export default appWithTranslation(MyApp, nextI18NextConfig);

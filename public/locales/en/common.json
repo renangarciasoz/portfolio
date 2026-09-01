@@ -1,60 +1,202 @@
 {
-  "turnLightsOff": "Turn lights off",
-  "turnLightsOn": "Turn lights on",
-  "introduction": "Hello 👋 <br /> I'm Renan, <br />Software Engineer!",
-  "about": "A Brazilian with eight years of experience in the field. I'm located in Los Angeles, California, and passionate about creating innovative and efficient software solutions. My professional journey has allowed me to enhance my skills and contribute to successful projects. I'm eager to continue facing exciting challenges and shaping the future of technology.<br/><br/>Outside the office, I find my passion in mentoring beginners in programming and helping people take their first steps in this incredible universe. I also profoundly value spending time with my family and constantly seek new hobbies and adventures to spice up my life. Traveling is one of my greatest passions, and I maintain an active lifestyle through physical activities.<br/><br/>Amidst all this, I'm constantly making new friends, exploring new cultures, and expanding my horizons.",
+  "meta": {
+    "title": "Renan Garcia, Software Engineer",
+    "description": "Software Engineer based in Los Angeles, building reliable software with React, Next.js and TypeScript since 2016."
+  },
+  "nav": {
+    "brandFull": "Renan.",
+    "brandShort": "R.",
+    "about": "About",
+    "skills": "Skills",
+    "career": "Career",
+    "projects": "Projects",
+    "contact": "Contact",
+    "resume": "Download CV"
+  },
+  "theme": {
+    "toDark": "Turn lights off",
+    "toLight": "Turn lights on"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "role": "Software Engineer",
+    "tagline": "I build reliable software, and I care as much about the people and culture that ship it.",
+    "status": "Currently leading a team of five",
+    "scroll": "Scroll"
+  },
+  "about": {
+    "title": "About",
+    "body": "A Brazilian who has been building software since 2016. I'm based in Los Angeles, California, and passionate about creating innovative and efficient software solutions. My professional journey has allowed me to sharpen my craft and contribute to successful projects. I'm eager to keep facing exciting challenges and shaping the future of technology.<br /><br />As a leader, I try to bring both structure and heart. I want people to feel seen, challenged, and supported, so I give them ownership, room to fail, and honest feedback. I would rather grow a team than be the smartest person in the room.<br /><br />Outside of work, I love mentoring people taking their first steps in programming. I deeply value time with my family and staying active, whether that is the gym, running, the beach, or snowboarding and skiing. Along the way I keep making new friends, exploring new cultures, and expanding my horizons."
+  },
   "principles": {
-    "title": "5 Principles",
-    "principles": [
+    "title": "Values",
+    "items": [
       {
-        "title": "People"
+        "title": "Empathy",
+        "description": "Understanding others before judging."
       },
       {
-        "title": "Quality"
+        "title": "Solidarity",
+        "description": "Being present for people, especially in hard times."
       },
       {
-        "title": "Be HAPPY"
+        "title": "Persistence",
+        "description": "Pushing forward even when it is hard."
       },
       {
-        "title": "Growth Mindset"
+        "title": "Forgiveness",
+        "description": "Letting go of mistakes and choosing growth over resentment."
       },
       {
-        "title": "Challenge the Status Quo"
+        "title": "Curiosity",
+        "description": "Always learning, always asking questions."
       }
+    ]
+  },
+  "skills": {
+    "title": "Skills",
+    "categories": [
+      { "id": "languages", "title": "Languages" },
+      { "id": "frameworks", "title": "Frameworks & Libraries" },
+      { "id": "testing", "title": "Testing" },
+      { "id": "cloud", "title": "Cloud & DevOps" },
+      { "id": "practices", "title": "Practices" },
+      { "id": "tools", "title": "Tools & Platforms" }
     ]
   },
   "career": {
     "title": "Career",
     "dateTemplate": "MMM yyyy",
-    "shortMonths": "mos",
     "present": "Present",
+    "to": "to",
+    "earlier": "Earlier experience",
+    "yearsShort": "yrs",
+    "monthsShort": "mos",
     "jobs": [
       {
-        "title": "Software Engineer",
+        "id": "EPCVIP",
+        "title": "Lead Software Engineer",
         "company": "EPCVIP",
-        "location": "Los Angeles, California"
+        "location": "Los Angeles, California",
+        "summary": "Grew from Software Engineer to Senior and then Lead. I lead a team of five and I am helping shape a new product engineering function, close to both the code and the product.",
+        "highlights": [
+          "Led the build of a unified internal platform that consolidates the company systems into a single Nx monorepo, with React, Material UI and an in-house design system.",
+          "Designed the AWS infrastructure and CI/CD with Terraform, Bitbucket, Nx affected and Playwright.",
+          "Shipped internal products with the team, including a call center app, a static generator that replaced legacy Smarty templates, an analytics platform and a feature flag platform.",
+          "Partnered with marketing on white label sites and lead conversion, with Google Analytics and Google Tag Manager.",
+          "Grew the team so every engineer owns their own application, from interns to promotions.",
+          "Now leading the move of a seven year old Smarty system into a monorepo that works like an internal website builder."
+        ]
       },
       {
+        "id": "Livus",
         "title": "Staff Front-end Engineer (founding team)",
         "company": "Livus",
-        "location": "Sao Paulo, Brazil"
+        "location": "São Paulo, Brazil",
+        "summary": "Founding front end engineer on a platform for course creators, where I later hired and mentored a second engineer. A fully external facing product, so quality and testing came first.",
+        "highlights": [
+          "Led a full front end refactor, adding a design system and raising the quality bar with Jest and Cypress.",
+          "Helped build the tools creators used to run their business: course modules, sales pages with checkout, materials, scheduled Zoom classes and configurable analytics.",
+          "Built a WYSIWYG editor that let each creator design and run their own page.",
+          "Worked closely with product across React, Node.js and GraphQL, and owned front end analytics with Google Analytics, pixels and Hotjar."
+        ]
       },
       {
-        "title": "Tech Lead Front-end",
+        "id": "TC",
+        "title": "Senior Front-end Engineer",
         "company": "TC",
-        "location": "Sao Paulo, Brazil"
+        "location": "São Paulo, Brazil",
+        "summary": "Joined as a Senior Front-end Engineer on a platform for traders and investors, then moved to lead a small onboarding squad with a product manager and a designer.",
+        "highlights": [
+          "Led the migration of the public site from WordPress to React, keeping WordPress as a headless CMS.",
+          "Built a guided onboarding experience so each user's first steps were clear and simple."
+        ]
       },
       {
-        "title": "Senior Software Engineer",
+        "id": "Loft",
+        "title": "Software Engineer II",
         "company": "Loft",
-        "location": "Sao Paulo, Brazil"
+        "location": "São Paulo, Brazil",
+        "summary": "Software Engineer on the seller onboarding squad at a proptech for buying and selling homes, focused on the front end of the selling experience.",
+        "highlights": [
+          "Made the seller flow and forms faster and clearer, and built systems to bring in more qualified leads.",
+          "Built a dynamic form that adapted to each answer, auto qualifying sellers so they could get a direct proposal instead of a generic reply.",
+          "Helped ship a price simulator on a map: type an address and see the price and its evolution, powered by the company data team. It was featured on Exame."
+        ]
       }
     ]
   },
+  "projects": {
+    "title": "Selected Projects",
+    "visit": "Visit",
+    "code": "Code",
+    "items": [
+      {
+        "id": "finance-assistant",
+        "name": "Finance Assistant (AI)",
+        "description": "A personal project. An AI assistant that helps track and make sense of personal finances."
+      },
+      {
+        "id": "movie-curator",
+        "name": "Movie Curator (AI)",
+        "description": "A personal project. An AI that curates and recommends movies to watch."
+      },
+      {
+        "id": "portfolio",
+        "name": "Personal Portfolio",
+        "description": "This very site. A fast, accessible and fully bilingual portfolio with a dynamic PDF résumé generator, built with Next.js, TypeScript and Material UI."
+      }
+    ]
+  },
+  "education": {
+    "title": "Education & Certifications",
+    "educationTitle": "Education",
+    "certificationsTitle": "Certifications",
+    "languagesTitle": "Languages",
+    "education": [
+      {
+        "id": "ilac",
+        "institution": "ILAC",
+        "degree": "English Program",
+        "location": "Canada"
+      },
+      {
+        "id": "impacta",
+        "institution": "Impacta Tecnologia",
+        "degree": "Technical High School, Systems Analysis and Development",
+        "location": "São Paulo, Brazil"
+      }
+    ],
+    "certifications": [
+      {
+        "id": "ucla",
+        "institution": "UCLA",
+        "degree": "General Business Management & Leadership",
+        "detail": "Leadership · Management · Communication · Negotiation · Conflict resolution"
+      }
+    ],
+    "languages": [
+      { "name": "English", "level": "Fluent, Duolingo English Test 125 (2025)" },
+      { "name": "Portuguese", "level": "Native" }
+    ]
+  },
+  "contact": {
+    "title": "Say hello",
+    "body": "The best way to reach me is by email. I read every message and reply personally.",
+    "socialsTitle": "Other places you can find me"
+  },
   "footer": {
-    "socialMediasTitle": "Other places that you can find me",
-    "credits": "This site was built by me 🤩",
+    "credits": "Designed & built by Renan Garcia",
     "techsTitle": "With the help of the technologies below",
-    "underConstruction": "🛠 Under construction"
+    "rights": "All rights reserved."
+  },
+  "resume": {
+    "download": "Download CV",
+    "generating": "Generating…",
+    "summaryTitle": "Summary",
+    "experienceTitle": "Experience",
+    "skillsTitle": "Skills",
+    "educationTitle": "Education",
+    "present": "Present"
   }
 }

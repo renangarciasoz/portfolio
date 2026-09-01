@@ -1,16 +1,29 @@
 /** @type {import('next').NextConfig} */
-const withPWA = require("next-pwa");
-const runtimeCaching = require("next-pwa/cache");
 const { i18n } = require("./next-i18next.config");
 
-const nextConfig = withPWA({
+const nextConfig = {
   i18n,
   reactStrictMode: true,
-  pwa: {
-    disable: process.env.NODE_ENV === "development",
-    dest: "public",
-    runtimeCaching,
+  poweredByHeader: false,
+  compiler: {
+    emotion: true,
   },
-});
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ];
+  },
+};
 
 module.exports = nextConfig;

@@ -1,51 +1,52 @@
-import { differenceInMonths, endOfDay } from "date-fns";
-import { Companies } from "types/companies";
+import { differenceInMonths, parseISO } from "date-fns";
+import { enUS, ptBR } from "date-fns/locale";
+import { JOB_DATES } from "data/profile";
 
-export const getJobsDates = (
-  company: Companies
-): {
+/** Maps a Next.js locale to the matching date-fns locale for month names. */
+export const getDateFnsLocale = (locale?: string) =>
+  locale === "pt-BR" ? ptBR : enUS;
+
+export interface ComputedJobDates {
   start: Date;
   end: Date;
-  worked: number;
-} => {
-  const jobsStartDate = {
-    EPCVIP: {
-      start: endOfDay(new Date("2022-06-01")),
-      end: endOfDay(new Date()),
-    },
-    Livus: {
-      start: endOfDay(new Date("2021-08-01")),
-      end: endOfDay(new Date("2022-05-31")),
-    },
-    TC: {
-      start: endOfDay(new Date("2021-02-01")),
-      end: endOfDay(new Date("2021-08-01")),
-    },
-    Loft: {
-      start: endOfDay(new Date("2019-07-01")),
-      end: endOfDay(new Date("2021-02-01")),
-    },
+  isPresent: boolean;
+  months: number;
+}
+
+export const getJobDates = (companyId: string): ComputedJobDates | null => {
+  const entry = JOB_DATES[companyId];
+
+  if (!entry) {
+    return null;
+  }
+
+  const start = parseISO(entry.start);
+  const end = entry.end ? parseISO(entry.end) : new Date();
+
+  return {
+    start,
+    end,
+    isPresent: !entry.end,
+    months: Math.max(differenceInMonths(end, start), 0),
   };
+};
 
-  const jobDates = (Object.keys(jobsStartDate) as Companies[]).reduce(
-    (hash, company) => {
-      const dates = jobsStartDate[company];
-      return {
-        ...hash,
-        [company]: {
-          ...dates,
-          worked: differenceInMonths(dates.end, dates.start),
-        },
-      };
-    },
-    {} as {
-      [key in Companies]: {
-        end: Date;
-        start: Date;
-        worked: number;
-      };
-    }
-  );
+/** Human-friendly duration such as "2 yrs 4 mos" using localized unit labels. */
+export const formatDuration = (
+  months: number,
+  units: { year: string; month: string }
+): string => {
+  const years = Math.floor(months / 12);
+  const remaining = months % 12;
+  const parts: string[] = [];
 
-  return jobDates[company];
+  if (years > 0) {
+    parts.push(`${years} ${units.year}`);
+  }
+
+  if (remaining > 0 || years === 0) {
+    parts.push(`${remaining} ${units.month}`);
+  }
+
+  return parts.join(" ");
 };
