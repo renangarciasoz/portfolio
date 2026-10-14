@@ -143,12 +143,25 @@ export const DownloadResumeButton = ({
   const handleDownload = async () => {
     setLoading(true);
     try {
-      const [{ pdf }, { ResumeDocument }] = await Promise.all([
+      const [{ Font, pdf }, { ResumeDocument }, fonts] = await Promise.all([
         import("@react-pdf/renderer"),
         import("./ResumeDocument"),
+        import("./fonts"),
       ]);
 
-      const blob = await pdf(<ResumeDocument data={buildData()} />).toBlob();
+      fonts.registerResumeFonts(Font);
+      const data = buildData();
+      const render = (resumeFonts: typeof fonts.BRAND_FONTS) =>
+        pdf(<ResumeDocument data={data} fonts={resumeFonts} />).toBlob();
+
+      let blob: Blob;
+      try {
+        blob = await render(fonts.BRAND_FONTS);
+      } catch (error) {
+        // eslint-disable-next-line no-console
+        console.warn("Résumé fonts unavailable, using built-in fonts", error);
+        blob = await render(fonts.FALLBACK_FONTS);
+      }
 
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
@@ -157,7 +170,8 @@ export const DownloadResumeButton = ({
       document.body.appendChild(link);
       link.click();
       link.remove();
-      URL.revokeObjectURL(url);
+      // Revoking right away can cancel the download in Safari and Firefox.
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
     } catch (error) {
       // eslint-disable-next-line no-console
       console.error("Failed to generate résumé PDF", error);

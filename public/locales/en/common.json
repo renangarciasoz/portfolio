@@ -75,18 +75,27 @@
     "monthsShort": "mos",
     "jobs": [
       {
-        "id": "EPCVIP",
+        "id": "EPCVIP-lead",
         "title": "Lead Software Engineer",
         "company": "EPCVIP",
         "location": "Los Angeles, California",
-        "summary": "Grew from Software Engineer to Senior and then Lead. Led a team of five and helped shape a new product engineering function, close to both the code and the product.",
+        "summary": "Came back as Lead after the UCLA leadership program. Led a team of five and helped shape a new product engineering function, close to both the code and the product.",
         "highlights": [
           "Led the build of a unified internal platform that consolidates the company systems into a single Nx monorepo, with React, Material UI and an in-house design system.",
           "Designed the AWS infrastructure and CI/CD with Terraform, Bitbucket, Nx affected and Playwright.",
-          "Shipped internal products with the team, including a call center app, a static generator that replaced legacy Smarty templates, an analytics platform and a feature flag platform.",
-          "Partnered with marketing on white label sites and lead conversion, with Google Analytics and Google Tag Manager.",
           "Grew the team so every engineer owns their own application, from interns to promotions.",
           "Kicked off the move of a seven year old Smarty system into a monorepo that works like an internal website builder."
+        ]
+      },
+      {
+        "id": "EPCVIP-senior",
+        "title": "Senior Software Engineer",
+        "company": "EPCVIP",
+        "location": "Los Angeles, California",
+        "summary": "Joined as a Software Engineer and was promoted to Senior in 2023.",
+        "highlights": [
+          "Shipped internal products with the team, including a call center app, a static generator that replaced legacy Smarty templates, an analytics platform and a feature flag platform.",
+          "Partnered with marketing on white label sites and lead conversion, with Google Analytics and Google Tag Manager."
         ]
       },
       {

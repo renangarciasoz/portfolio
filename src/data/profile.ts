@@ -50,8 +50,8 @@ export const PROFILE_IMAGE = "/images/renan-profile.jpg";
 export const SITE_URL = "https://renangarcia.com";
 
 /**
- * Career timeline. `id` matches the `company` field in the i18n `career.jobs`
- * array. `end: null` means "present".
+ * Career timeline. `id` matches the `id` field in the i18n `career.jobs`
+ * array, so one company can have several stints. `end: null` means "present".
  */
 export interface JobDates {
   start: string; // ISO date
@@ -60,9 +60,14 @@ export interface JobDates {
 }
 
 export const JOB_DATES: Record<string, JobDates> = {
-  EPCVIP: {
-    start: "2022-06-01",
+  "EPCVIP-lead": {
+    start: "2025-12-01",
     end: "2026-09-30",
+    url: "https://www.epcvip.com/",
+  },
+  "EPCVIP-senior": {
+    start: "2022-07-01",
+    end: "2024-01-31",
     url: "https://www.epcvip.com/",
   },
   Livus: { start: "2021-08-01", end: "2022-05-31" },

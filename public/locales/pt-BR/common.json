@@ -75,18 +75,27 @@
     "monthsShort": "meses",
     "jobs": [
       {
-        "id": "EPCVIP",
+        "id": "EPCVIP-lead",
         "title": "Lead Software Engineer",
         "company": "EPCVIP",
         "location": "Los Angeles, Califórnia",
-        "summary": "Evoluí de Software Engineer para Senior e depois Lead. Liderei um time de cinco pessoas e ajudei a moldar uma nova função de product engineering, perto do código e do produto.",
+        "summary": "Voltei como Lead depois do programa de liderança da UCLA. Liderei um time de cinco pessoas e ajudei a moldar uma nova função de product engineering, perto do código e do produto.",
         "highlights": [
           "Liderei a construção de uma plataforma interna unificada que consolida os sistemas da empresa em um único monorepo Nx, com React, Material UI e um design system próprio.",
           "Desenhei a infraestrutura na AWS e o CI/CD com Terraform, Bitbucket, Nx affected e Playwright.",
-          "Entreguei produtos internos com o time, entre eles um app de call center, um gerador estático que substituiu templates Smarty legados, uma plataforma de analytics e uma plataforma de feature flags.",
-          "Trabalhei com o marketing em sites whitelabel e conversão de lead, com Google Analytics e Google Tag Manager.",
           "Formei o time a ponto de cada engenheiro ser dono da própria aplicação, de estagiários a promoções.",
           "Iniciei a migração de um sistema Smarty de sete anos para um monorepo que funciona como um construtor de sites interno."
+        ]
+      },
+      {
+        "id": "EPCVIP-senior",
+        "title": "Senior Software Engineer",
+        "company": "EPCVIP",
+        "location": "Los Angeles, Califórnia",
+        "summary": "Entrei como Software Engineer e fui promovido a Senior em 2023.",
+        "highlights": [
+          "Entreguei produtos internos com o time, entre eles um app de call center, um gerador estático que substituiu templates Smarty legados, uma plataforma de analytics e uma plataforma de feature flags.",
+          "Trabalhei com o marketing em sites whitelabel e conversão de lead, com Google Analytics e Google Tag Manager."
         ]
       },
       {
