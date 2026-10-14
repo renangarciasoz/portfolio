@@ -36,16 +36,11 @@ const Home: NextPage = () => {
     image: `${SITE_URL}${PROFILE_IMAGE}`,
     jobTitle: "Software Engineer",
     email: CONTACT.email,
-    worksFor: { "@type": "Organization", name: "EPCVIP" },
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Los Angeles",
-      addressRegion: "CA",
-      addressCountry: "US",
-    },
+    nationality: { "@type": "Country", name: "Brazil" },
     knowsLanguage: ["en", "pt-BR"],
     alumniOf: [
       { "@type": "CollegeOrUniversity", name: "UCLA" },
+      { "@type": "EducationalOrganization", name: "ILAC" },
       { "@type": "EducationalOrganization", name: "Impacta Tecnologia" },
     ],
     sameAs: SOCIALS.map((s) => s.href),

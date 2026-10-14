@@ -1,20 +1,80 @@
 import { Box, Link as MuiLink, Typography } from "@mui/material";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 import { Section } from "components/layout/Section";
 import { CERTIFICATIONS, EDUCATION, EducationMeta } from "data/profile";
 import { EducationLocale } from "types/locales";
+import { formatEducationPeriod } from "utils/education";
+
+/** Quiet square mark: the institution logo in grayscale, or its monogram. */
+const InstitutionMark = ({
+  meta,
+  institution,
+}: {
+  meta?: EducationMeta;
+  institution: string;
+}) => {
+  const monogram = meta?.monogram || institution.charAt(0);
+
+  return (
+    <Box
+      aria-hidden
+      sx={{
+        flexShrink: 0,
+        width: 48,
+        height: 48,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        border: (theme) => `1px solid ${theme.palette.divider}`,
+        borderRadius: 1.5,
+        color: "text.secondary",
+        overflow: "hidden",
+      }}
+    >
+      {meta?.logo ? (
+        <Box
+          component="img"
+          src={meta.logo}
+          alt=""
+          sx={{
+            width: "70%",
+            height: "70%",
+            objectFit: "contain",
+            filter: "grayscale(1)",
+            opacity: 0.75,
+          }}
+        />
+      ) : (
+        <Typography
+          component="span"
+          sx={{
+            fontFamily: "'Fraunces', serif",
+            fontWeight: 500,
+            lineHeight: 1,
+            letterSpacing: monogram.length > 2 ? "0.04em" : 0,
+            fontSize: monogram.length > 2 ? "0.72rem" : "1.05rem",
+          }}
+        >
+          {monogram}
+        </Typography>
+      )}
+    </Box>
+  );
+};
 
 const EntryList = ({
   heading,
   entries,
   meta,
-  rangeSeparator,
 }: {
   heading: string;
   entries: EducationLocale[];
   meta: EducationMeta[];
-  rangeSeparator: string;
 }) => {
+  const { t } = useTranslation();
+  const { locale } = useRouter();
+
   if (!entries || entries.length === 0) {
     return null;
   }
@@ -32,19 +92,25 @@ const EntryList = ({
       </Typography>
       {entries.map((entry, index) => {
         const m = metaById.get(entry.id);
-        const period = [m?.start, m?.end]
-          .filter(Boolean)
-          .join(` ${rangeSeparator} `);
+        const period = formatEducationPeriod(m, {
+          dateTemplate: t("career.dateTemplate"),
+          separator: t("career.to"),
+          locale,
+        });
 
         return (
           <Box
             key={entry.id}
             sx={{
-              py: 2,
+              display: "flex",
+              gap: 2.5,
+              py: 2.5,
               borderTop: (theme) =>
                 index === 0 ? "none" : `1px solid ${theme.palette.divider}`,
             }}
           >
+            <InstitutionMark meta={m} institution={entry.institution} />
+            <Box sx={{ minWidth: 0 }}>
             <Typography variant="h6" component="h3" sx={{ fontSize: "1.05rem" }}>
               {m?.url ? (
                 <MuiLink
@@ -74,6 +140,31 @@ const EntryList = ({
                 {entry.detail}
               </Typography>
             )}
+            {m?.current && (
+              <Typography
+                variant="caption"
+                color="text.secondary"
+                sx={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 1,
+                  mt: 1,
+                  letterSpacing: "0.04em",
+                }}
+              >
+                <Box
+                  component="span"
+                  sx={{
+                    width: 6,
+                    height: 6,
+                    borderRadius: "50%",
+                    bgcolor: "#7FA88B",
+                  }}
+                />
+                {t("education.inProgress")}
+              </Typography>
+            )}
+            </Box>
           </Box>
         );
       })}
@@ -116,13 +207,11 @@ export const Education = () => {
           heading={t("education.educationTitle")}
           entries={education}
           meta={EDUCATION}
-          rangeSeparator={t("career.to")}
         />
         <EntryList
           heading={t("education.certificationsTitle")}
           entries={certifications}
           meta={CERTIFICATIONS}
-          rangeSeparator={t("career.to")}
         />
       </Box>
 

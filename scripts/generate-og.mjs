@@ -53,7 +53,7 @@ const el = div(
         color: "#9B9488",
       },
       [
-        div({ display: "flex" }, "Los Angeles, California"),
+        div({ display: "flex" }, "From Brazil, studying at UCLA"),
         div({ display: "flex" }, "renangarcia.com"),
       ]
     ),

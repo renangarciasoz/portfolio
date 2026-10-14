@@ -1,7 +1,6 @@
 import KeyboardArrowDown from "@mui/icons-material/KeyboardArrowDown";
 import { Box, Container, Divider, Typography } from "@mui/material";
 import { useTranslation } from "next-i18next";
-import { CONTACT } from "data/profile";
 import { SocialIcons } from "components/common/SocialIcons";
 
 export const Hero = () => {
@@ -142,7 +141,7 @@ export const Hero = () => {
             }}
           >
             <Typography variant="body2" color="text.secondary">
-              {CONTACT.location}
+              {t("hero.location")}
             </Typography>
             <SocialIcons size="small" />
           </Box>

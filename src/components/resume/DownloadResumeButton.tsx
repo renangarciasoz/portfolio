@@ -17,6 +17,7 @@ import {
   EducationLocale,
   SkillCategoryLocale,
 } from "types/locales";
+import { formatEducationPeriod } from "utils/education";
 import { getDateFnsLocale, getJobDates } from "utils/jobs";
 import { ResumeData, ResumeEducation } from "./resume.types";
 
@@ -90,13 +91,21 @@ export const DownloadResumeButton = ({
       const metaById = new Map(meta.map((m) => [m.id, m]));
       return entries.map((entry) => {
         const m = metaById.get(entry.id);
-        const period = [m?.start, m?.end]
-          .filter(Boolean)
-          .join(` ${t("career.to")} `);
+        const period = formatEducationPeriod(m, {
+          dateTemplate,
+          separator: t("career.to"),
+          locale,
+        });
         return {
           title: entry.degree,
           institution: entry.institution,
-          detail: [entry.location, period].filter(Boolean).join("  ·  "),
+          detail: [
+            entry.location,
+            period,
+            m?.current ? t("education.inProgress") : "",
+          ]
+            .filter(Boolean)
+            .join("  ·  "),
         };
       });
     };
@@ -105,7 +114,7 @@ export const DownloadResumeButton = ({
       locale: locale || "en",
       name: "Renan Garcia",
       role: t("hero.role"),
-      location: CONTACT.location,
+      location: t("hero.location"),
       email: CONTACT.email,
       phone: CONTACT.phone,
       socials: SOCIALS.map(({ name, href }) => ({ name, href })),

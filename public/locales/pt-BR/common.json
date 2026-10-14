@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Renan Garcia, Engenheiro de Software",
-    "description": "Engenheiro de Software em Los Angeles, criando software confiável com React, Next.js e TypeScript desde 2016."
+    "description": "Engenheiro de Software brasileiro, criando software confiável com React, Next.js e TypeScript desde 2016. Hoje estudando na UCLA."
   },
   "nav": {
     "brandFull": "Renan.",
@@ -21,12 +21,13 @@
     "greeting": "Olá, eu sou o",
     "role": "Engenheiro de Software",
     "tagline": "Construo software confiável, e me importo na mesma medida com as pessoas e a cultura que o entregam.",
-    "status": "Hoje liderando um time de cinco",
+    "status": "Estudando Data Science e Cyber Security na UCLA",
+    "location": "Brasileiro, estudando na Califórnia",
     "scroll": "Rolar"
   },
   "about": {
     "title": "Sobre",
-    "body": "Brasileiro, trabalho com software desde 2016. Moro em Los Angeles, na Califórnia, e sou apaixonado por criar soluções de software inovadoras e eficientes. Minha trajetória profissional me permitiu evoluir constantemente e contribuir para projetos de sucesso. Sigo animado para encarar novos desafios e ajudar a moldar o futuro da tecnologia.<br /><br />Como líder, tento trazer estrutura e coração. Quero que as pessoas se sintam vistas, desafiadas e apoiadas, então dou autonomia, espaço para errar e feedback honesto. Prefiro desenvolver um time a ser a pessoa mais inteligente da sala.<br /><br />Fora do trabalho, amo orientar quem está dando os primeiros passos na programação. Valorizo demais o tempo com a minha família e me manter ativo, seja na academia, correndo, na praia ou fazendo snowboard e esqui. E, no caminho, sigo fazendo novos amigos, conhecendo novas culturas e expandindo meus horizontes."
+    "body": "Brasileiro, trabalho com software desde 2016. No momento estou na Califórnia estudando Data Science e Cyber Security na UCLA, e sou apaixonado por criar soluções de software inovadoras e eficientes. Minha trajetória profissional me permitiu evoluir constantemente e contribuir para projetos de sucesso. Sigo animado para encarar novos desafios e ajudar a moldar o futuro da tecnologia.<br /><br />Como líder, tento trazer estrutura e coração. Quero que as pessoas se sintam vistas, desafiadas e apoiadas, então dou autonomia, espaço para errar e feedback honesto. Prefiro desenvolver um time a ser a pessoa mais inteligente da sala.<br /><br />Fora do trabalho, amo orientar quem está dando os primeiros passos na programação. Valorizo demais o tempo com a minha família e me manter ativo, seja na academia, correndo, na praia ou fazendo snowboard e esqui. E, no caminho, sigo fazendo novos amigos, conhecendo novas culturas e expandindo meus horizontes."
   },
   "principles": {
     "title": "Valores",
@@ -78,14 +79,14 @@
         "title": "Lead Software Engineer",
         "company": "EPCVIP",
         "location": "Los Angeles, Califórnia",
-        "summary": "Evoluí de Software Engineer para Senior e depois Lead. Lidero um time de cinco pessoas e ajudo a moldar uma nova função de product engineering, perto do código e do produto.",
+        "summary": "Evoluí de Software Engineer para Senior e depois Lead. Liderei um time de cinco pessoas e ajudei a moldar uma nova função de product engineering, perto do código e do produto.",
         "highlights": [
           "Liderei a construção de uma plataforma interna unificada que consolida os sistemas da empresa em um único monorepo Nx, com React, Material UI e um design system próprio.",
           "Desenhei a infraestrutura na AWS e o CI/CD com Terraform, Bitbucket, Nx affected e Playwright.",
           "Entreguei produtos internos com o time, entre eles um app de call center, um gerador estático que substituiu templates Smarty legados, uma plataforma de analytics e uma plataforma de feature flags.",
           "Trabalhei com o marketing em sites whitelabel e conversão de lead, com Google Analytics e Google Tag Manager.",
           "Formei o time a ponto de cada engenheiro ser dono da própria aplicação, de estagiários a promoções.",
-          "Hoje conduzo a migração de um sistema Smarty de sete anos para um monorepo que funciona como um construtor de sites interno."
+          "Iniciei a migração de um sistema Smarty de sete anos para um monorepo que funciona como um construtor de sites interno."
         ]
       },
       {
@@ -153,7 +154,14 @@
     "educationTitle": "Formação",
     "certificationsTitle": "Certificações",
     "languagesTitle": "Idiomas",
+    "inProgress": "Em andamento",
     "education": [
+      {
+        "id": "ucla-data",
+        "institution": "UCLA",
+        "degree": "Data Science & Cyber Security",
+        "location": "Califórnia"
+      },
       {
         "id": "ilac",
         "institution": "ILAC",

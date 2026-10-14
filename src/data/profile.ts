@@ -12,15 +12,13 @@
 export interface ContactInfo {
   /** Public e-mail used on the site and in the generated résumé. */
   email: string;
-  /** City / region shown next to the name. */
-  location: string;
   /** Optional phone shown only in the résumé (leave "" to hide). */
   phone: string;
 }
 
+/** The line shown next to the name is translated: see `hero.location`. */
 export const CONTACT: ContactInfo = {
   email: "renangarciasoz@hotmail.com",
-  location: "Los Angeles, California",
   phone: "",
 };
 
@@ -62,7 +60,11 @@ export interface JobDates {
 }
 
 export const JOB_DATES: Record<string, JobDates> = {
-  EPCVIP: { start: "2022-06-01", end: null, url: "https://www.epcvip.com/" },
+  EPCVIP: {
+    start: "2022-06-01",
+    end: "2026-09-30",
+    url: "https://www.epcvip.com/",
+  },
   Livus: { start: "2021-08-01", end: "2022-05-31" },
   TC: { start: "2021-02-01", end: "2021-08-01", url: "https://tc.com.br/" },
   Loft: { start: "2019-07-01", end: "2021-02-01", url: "https://loft.com.br/" },
@@ -145,22 +147,36 @@ export const SKILL_GROUPS: SkillGroup[] = [
 ];
 
 /**
- * Education & certifications. Both start empty so the section stays hidden
- * until you add real data. `id` matches the i18n entries.
- * 👉 Fill in your degree and the UCLA leadership program here.
+ * Education & certifications, most recent first. `id` matches the i18n
+ * entries. Dates are "yyyy" or "yyyy-MM"; months are formatted per locale.
+ *
+ * Each entry shows a small mark next to it: the `monogram` by default, or the
+ * `logo` image (rendered in grayscale) once you drop the file in
+ * /public/images/logos and set its path here.
  */
 export interface EducationMeta {
   id: string;
   start?: string;
   end?: string;
+  /** Still enrolled: shows an "in progress" note. */
+  current?: boolean;
+  monogram: string;
+  logo?: string;
   url?: string;
 }
 
 export const EDUCATION: EducationMeta[] = [
-  { id: "ilac", start: "2020" },
-  { id: "impacta", start: "2016", end: "2018" },
+  {
+    id: "ucla-data",
+    start: "2026-09",
+    end: "2027-07",
+    current: true,
+    monogram: "UCLA",
+  },
+  { id: "ilac", start: "2020", monogram: "ILAC" },
+  { id: "impacta", start: "2016", end: "2018", monogram: "IT" },
 ];
 
 export const CERTIFICATIONS: EducationMeta[] = [
-  { id: "ucla", start: "Mar 2025", end: "Dec 2025" },
+  { id: "ucla", start: "2025-03", end: "2025-12", monogram: "UCLA" },
 ];

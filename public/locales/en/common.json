@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Renan Garcia, Software Engineer",
-    "description": "Software Engineer based in Los Angeles, building reliable software with React, Next.js and TypeScript since 2016."
+    "description": "Brazilian Software Engineer building reliable software with React, Next.js and TypeScript since 2016. Currently studying at UCLA."
   },
   "nav": {
     "brandFull": "Renan.",
@@ -21,12 +21,13 @@
     "greeting": "Hello, I'm",
     "role": "Software Engineer",
     "tagline": "I build reliable software, and I care as much about the people and culture that ship it.",
-    "status": "Currently leading a team of five",
+    "status": "Studying Data Science & Cyber Security at UCLA",
+    "location": "From Brazil, studying in California",
     "scroll": "Scroll"
   },
   "about": {
     "title": "About",
-    "body": "A Brazilian who has been building software since 2016. I'm based in Los Angeles, California, and passionate about creating innovative and efficient software solutions. My professional journey has allowed me to sharpen my craft and contribute to successful projects. I'm eager to keep facing exciting challenges and shaping the future of technology.<br /><br />As a leader, I try to bring both structure and heart. I want people to feel seen, challenged, and supported, so I give them ownership, room to fail, and honest feedback. I would rather grow a team than be the smartest person in the room.<br /><br />Outside of work, I love mentoring people taking their first steps in programming. I deeply value time with my family and staying active, whether that is the gym, running, the beach, or snowboarding and skiing. Along the way I keep making new friends, exploring new cultures, and expanding my horizons."
+    "body": "A Brazilian who has been building software since 2016. I'm currently in California studying Data Science and Cyber Security at UCLA, and I'm passionate about creating innovative and efficient software solutions. My professional journey has allowed me to sharpen my craft and contribute to successful projects. I'm eager to keep facing exciting challenges and shaping the future of technology.<br /><br />As a leader, I try to bring both structure and heart. I want people to feel seen, challenged, and supported, so I give them ownership, room to fail, and honest feedback. I would rather grow a team than be the smartest person in the room.<br /><br />Outside of work, I love mentoring people taking their first steps in programming. I deeply value time with my family and staying active, whether that is the gym, running, the beach, or snowboarding and skiing. Along the way I keep making new friends, exploring new cultures, and expanding my horizons."
   },
   "principles": {
     "title": "Values",
@@ -78,14 +79,14 @@
         "title": "Lead Software Engineer",
         "company": "EPCVIP",
         "location": "Los Angeles, California",
-        "summary": "Grew from Software Engineer to Senior and then Lead. I lead a team of five and I am helping shape a new product engineering function, close to both the code and the product.",
+        "summary": "Grew from Software Engineer to Senior and then Lead. Led a team of five and helped shape a new product engineering function, close to both the code and the product.",
         "highlights": [
           "Led the build of a unified internal platform that consolidates the company systems into a single Nx monorepo, with React, Material UI and an in-house design system.",
           "Designed the AWS infrastructure and CI/CD with Terraform, Bitbucket, Nx affected and Playwright.",
           "Shipped internal products with the team, including a call center app, a static generator that replaced legacy Smarty templates, an analytics platform and a feature flag platform.",
           "Partnered with marketing on white label sites and lead conversion, with Google Analytics and Google Tag Manager.",
           "Grew the team so every engineer owns their own application, from interns to promotions.",
-          "Now leading the move of a seven year old Smarty system into a monorepo that works like an internal website builder."
+          "Kicked off the move of a seven year old Smarty system into a monorepo that works like an internal website builder."
         ]
       },
       {
@@ -153,7 +154,14 @@
     "educationTitle": "Education",
     "certificationsTitle": "Certifications",
     "languagesTitle": "Languages",
+    "inProgress": "In progress",
     "education": [
+      {
+        "id": "ucla-data",
+        "institution": "UCLA",
+        "degree": "Data Science & Cyber Security",
+        "location": "California"
+      },
       {
         "id": "ilac",
         "institution": "ILAC",
